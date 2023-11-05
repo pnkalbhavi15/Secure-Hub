@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Maps Marker Clustering Example</title>
+    <style>
+      /* Set the height of the map container */
+      #map {
+        height: 600px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Create a container for the map -->
+    <div id="map"></div>
+
+    <!-- Add an input field and a button for geocoding -->
+    <div>
+      <input type="text" id="addressInput" placeholder="Enter an address" />
+      <button onclick="geocodeAddress()">Geocode</button>
+    </div>
+
+    <script>
+      let map;
+      let markers = [];
+
+      // Define a callback function to be called once the Google Maps API is loaded
+      function initMap() {
+        // Create a new map instance
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: 0, lng: 0 },
+          zoom: 2, // You can adjust the initial zoom level
+        });
+
+        // Initialize marker clustering
+        const markerCluster = new MarkerClusterer(map, markers, {
+          imagePath:
+            "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
+        });
+      }
+
+      function geocodeAddress() {
+        // Get the address from the input field
+        const address = document.getElementById("addressInput").value;
+
+        // Use the Geocoding API to convert the address to coordinates
+        const geocoder = new google.maps.Geocoder();
+        geocoder.geocode({ address: address }, function (results, status) {
+          if (status === google.maps.GeocoderStatus.OK && results.length > 0) {
+            const location = results[0].geometry.location;
+
+            // Add a marker for the geocoded location
+            addMarkerWithLabel(
+              { lat: location.lat(), lng: location.lng() },
+              "Geocoded Address"
+            );
+
+            // Add the new marker to the clustering
+            markers.push(new google.maps.Marker({ position: location }));
+          } else {
+            console.error("Geocoding failed: " + status);
+          }
+        });
+      }
+
+      // Function to add a marker with a label
+      function addMarkerWithLabel(position, label) {
+        const marker = new google.maps.Marker({
+          position: position,
+          map: map,
+          label: label, // Set the label for the marker
+        });
+      }
+    </script>
+
+    <!-- Include the Marker Clusterer library BEFORE you use it -->
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+
+    <!-- Replace 'YOUR_API_KEY' with your actual Google Maps API key -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0qUXWx5AVEhC8Hv4WSVAaD3sjas-CXOk&callback=initMap"
+      async
+      defer
+    ></script>
+  </body>
+</html>
