@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    background-color: black;
+    color: rgb((216, 31, 31) 55, 255, 255);
+    overflow: hidden;
+  }
+  
+
+  .header {
+    height: 10vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+  }
+  
+  .logo {
+    width: 15%;
+    height: 100%;
+    margin-left: 10rem;
+    overflow: hidden;
+  }
+  
+  .report {
+    width: 10rem;
+    height: 70%;
+    color: white;
+    background-color: rgb(255, 91, 91);
+    border: 1px solid white;
+    border-radius: 2rem;
+    margin-left: 3rem;
+    font-size: 1.2rem;
+  }
+  
+  .educate {
+    width: 10rem;
+    height: 70%;
+    margin-left: 10rem;
+    color: white;
+    border: 1px solid white;
+    background-color: rgb(65, 247, 65);
+    border-radius: 2rem;
+    margin-left: 3rem;
+    font-size: 1.2rem;
+  }
+  
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 25%;
+    height: 100%;
+  }
+  
+  .logo img {
+    width: 100%;
+    height: 110%;
+  }
+  
+  #icon {
+    font-size: 3rem;
+    margin-right: 2rem;
+  }
+  
+  #icon:hover {
+    cursor: pointer;
+  }
+  
+  button:hover {
+    cursor: pointer;
+  }
+
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+  }
+
+  body{
+    background-color: black;
+    overflow-x: hidden;
+  }
+
+.setpassword{
+    height: 30rem;
+    width: 70rem;
+    margin-top: 10rem;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+body{
+    overflow: hidden;
+}
+.setpassword input{
+    height: 5rem;
+    width: 50rem;
+    border-radius: 2rem;
+    outline: none;
+    margin-top: 2rem;
+    padding-left: 2rem;
+    font-size: 2.5rem;
+}
+
+
+.setpassword.active{
+    height: 20rem;
+    width: 70rem;
+    margin-top: 10rem;
+    color: white;
+    font-size: 2rem;
+    display: none;
+
+}
+
+.display{
+    width: 50rem;
+    height: 20rem;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 4rem;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+
+
+.display input{
+    width: 20rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+}

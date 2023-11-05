@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crime Report Form</title>
+    <link rel="stylesheet" type="text/css" href="stylesForReporting.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <img style="opacity: 0.5;" src="logoicon.jpeg" alt="" width="75" >
+    
+    </header>
+    <h1>Crime Report Form</h1>
+
+    <form action="submit_report.php" method="post" enctype="multipart/form-data">
+        <p>Instructions: Please complete this form with accurate and detailed information.</p>
+        <h2>Personal Information (Optional)</h2>
+        <label for="full_name">Name:</label>
+        <input type="text" id="full_name" name="full_name" placeholder="Your Full Name">
+        <br>
+        <label for="contact_number">Contact Number:</label>
+        <input type="tel" id="contact_number" name="contact_number" placeholder="Your Phone Number">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email Address">
+        <br>
+
+        <h2>Incident Details</h2>
+        <label for="incident_date">Date and Time of Incident:</label>
+        <input type="datetime-local" id="incident_date" name="incident_date">
+        <br>
+        <label for="location">Location of Incident:</label>
+        <input type="text" id="location" name="location" placeholder="Incident Location">
+        <br>
+        <label for="crime_type">Type of Crime:</label>
+        <select id="crime_type" name="crime_type">
+            <option value="theft">Theft</option>
+            <option value="assault">Assault</option>
+            <option value="vandalism">Vandalism</option>
+            <!-- Add more crime types as needed -->
+        </select>
+        <br>
+        <label for="description">Description of the Crime:</label>
+        <textarea id="description" name="description" placeholder="Provide a detailed description of the incident"></textarea>
+        <br>
+        <label for="law_enforcement_contacted">Was Law Enforcement Contacted?</label>
+        <input type="radio" id="law_enforcement_contacted_yes" name="law_enforcement_contacted" value="yes">Yes
+        <input type="radio" id="law_enforcement_contacted_no" name="law_enforcement_contacted" value="no">No
+        <br>
+
+        <h2>Witness Information (Optional)</h2>
+        <label for="witness_name">Name:</label>
+        <input type="text" id="witness_name" name="witness_name" placeholder="Witness Name">
+        <br>
+        <label for="witness_contact_number">Contact Number:</label>
+        <input type="tel" id="witness_contact_number" name="witness_contact_number" placeholder="Witness Phone Number">
+        <br>
+        <label for="witness_statement">Witness Statement:</label>
+        <textarea id="witness_statement" name="witness_statement" placeholder="Provide the witness statement"></textarea>
+        <br>
+
+        <h2>Evidence and Attachments</h2>
+        <label for="evidence">Upload Images or Documents (if any):</label>
+        <input type="file" id="evidence" name="evidence" accept="image/*,application/pdf">
+        <br>
+
+        <h2>Additional Information</h2>
+        <label for="injuries">Injuries (if any):</label>
+        <input type="text" id="injuries" name="injuries" placeholder="Description of Injuries">
+        <br>
+        <label for="property_damage">Property Damage (if any):</label>
+        <input type="text" id="property_damage" name="property_damage" placeholder="Description of Property Damage">
+        <br>
+
+        <h2>Submit and Consent</h2>
+        <label for="consent">I consent to the use of this information for law enforcement purposes:</label>
+        <input type="checkbox" id="consent" name="consent" required>
+        <br>
+        <input type="submit" value="Submit Report">
+    </form>
+</body>
+</html>

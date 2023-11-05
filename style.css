@@ -1,0 +1,365 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: black;
+  color: rgb((216, 31, 31) 55, 255, 255);
+  overflow: hidden;
+}
+
+body {
+  overflow: hidden;
+}
+.header {
+  height: 10vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.logo {
+  width: 15%;
+  height: 100%;
+  margin-left: 10rem;
+  overflow: hidden;
+}
+
+.report {
+  width: 10rem;
+  height: 3rem;
+  color: white;
+  background-color: rgb(255, 91, 91);
+  border: 1px solid white;
+  border-radius: 2rem;
+  margin-left: 3rem;
+  font-size: 1.2rem;
+}
+
+.educate {
+  width: 10rem;
+  height: 3rem;
+  margin-left: 10rem;
+  color: white;
+  border: 1px solid white;
+  background-color: rgb(65, 247, 65);
+  border-radius: 2rem;
+  margin-left: 3rem;
+  font-size: 1.2rem;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 25%;
+  height: 100%;
+}
+
+.logo img {
+  width: 100%;
+  height: 110%;
+}
+
+#icon {
+  font-size: 3rem;
+  margin-right: 2rem;
+}
+
+#icon:hover {
+  cursor: pointer;  
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#popup {
+  height: 40vh;
+  position: absolute;
+  left: 1300px;
+  top: 70px;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  border-radius: 2rem;
+  border: 2px solid white;
+  background-color: black;
+  overflow: hidden;
+  color: white;
+  transition: 1s;
+  z-index: 100000;
+}
+
+#popup.active {
+  position: absolute;
+  left: 950px;
+  top: 70px;
+}
+.parent {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.on {
+  width: 10rem;
+  height: 3rem;
+  background-color: rgb(36, 227, 36);
+  border: 2px solid white;
+  border-radius: 2rem;
+}
+
+.policelogin {
+  width: 10rem;
+  height: 3rem;
+  background-color: rgb(199, 241, 60);
+  color: black;
+  border: 2px solid white;
+  border-radius: 2rem;
+}
+
+.content {
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alerts {
+  width: 75%;
+  height: 85%;
+  margin-bottom: 4rem;
+  background-color: rgb(223, 76, 76);
+  border: 2px solid white;
+  border-radius: 2rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#forward {
+  position: absolute;
+  top: 40;
+  right: 80px;
+}
+
+#backward {
+  position: absolute;
+  top: 50;
+  left: 100px;
+}
+
+.police_alerts {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(52, 40, 107);
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.interactivemaps {
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+  position: relative;
+  top: -10;
+  left: 0;
+}
+
+.slider-container {
+  width: 100%;
+  height: 100%;
+
+  margin: 0 auto;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(227, 204, 204);
+  transition: transform 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  flex: 0 0 100%;
+  width: 100%;
+  color: white;
+  height: 100%;
+  margin: 0;
+  background-color: #000000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.card-content {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev-btn {
+  height: 4rem;
+  width: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 5rem;
+  transform: translateY(-50%);
+}
+
+.next-btn {
+  position: absolute;
+  height: 4rem;
+  width: 2rem;
+  top: 50%;
+  right: 5rem;
+  transform: translateY(-50%);
+}
+
+.card-content p {
+  height: 5rem;
+  width: 80%;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  background-color: white;
+  color: black;
+  border-radius: 2rem;
+}
+
+.card-content button {
+  width: 25%;
+  height: 3rem;
+  background-color: black;
+  border: 2px solid white;
+  color: white;
+  border-radius: 2rem;
+}
+
+.card-content img {
+  margin-top: 2rem;
+}
+
+#maps {
+  margin-top: 3rem;
+}
+
+.news {
+  width: 100%;
+  flex-wrap: wrap;
+  height: 35rem;
+  background-color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.box {
+  height: 15rem;
+  border-radius: 2rem;
+  width: 15rem;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.crime {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 23rem;
+}
+
+#crime {
+  width: 10rem;
+  height: 2.5rem;
+  margin-bottom: 1rem;
+  margin-left: 15rem;
+}
+
+.box p {
+  background-color: transparent;
+  color: grey;
+}
+
+.image {
+  height: 30rem;
+  width: 50rem;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image img {
+  width: 80%;
+  height: 100%;
+  border-radius: 2rem;
+}
+
+#Read {
+  margin-top: 2rem;
+  width: 20rem;
+}
+
+
+.boxes{
+  width: 100%;
+  height: 30rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.boxe:hover{
+  cursor: pointer;
+}
+
+.boxe h2{
+  text-decoration: underline;
+}
+
+.boxe{
+  margin: 1rem;
+  width: 25%;
+  border: 2px solid white;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 45%;
+  background-color: rgb(0, 0, 0);
+}
+
+.boxe p{
+  background-color: transparent;
+  color: lightgray;
+}

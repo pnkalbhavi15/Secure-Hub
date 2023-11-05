@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz with Pop-up</title>
+    <link rel="stylesheet" href="quiz.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="underline">Web Development Quiz</h1>
+      <p id="question"></p>
+      <div id="choices" class="btn-container">
+        <!-- Choices will be generated dynamically using JavaScript -->
+      </div>
+      <!--<button id="next-btn" class="btn" onclick="nextQuestion()">Next</button>-->
+      <p id="score">Score: 0</p>
+    </div>
+
+    <div id="custom-alert-yes" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeCustomAlert('yes')">&times;</span>
+        <img src="yay.gif" alt="GIF" />
+        <h1>YAYY!!! CORRECT</h1>
+      </div>
+    </div>
+
+    <div id="custom-alert-no" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeCustomAlert('no')">&times;</span>
+        <img src="oh_noo.gif" alt="GIF" />
+        <h1>TRY AGAIN!!</h1>
+      </div>
+    </div>
+
+    <script src="quiz.js"></script>
+  </body>
+</html>

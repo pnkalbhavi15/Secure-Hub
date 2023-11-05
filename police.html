@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Police Login</title>
+    <script type="text/babel"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: "bgs.jpg";
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color:rgb(16, 16, 16);
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            /* height: 60px; */
+        }
+
+        .card #drop {
+
+        }
+        #logo {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        #logout-button {
+            border-radius: 50px;
+            background-color: #9c22ff;
+            /* color: #fff; */
+            border: none;
+            width: 36;
+            height: 36;
+            padding: 5px 10px;
+            border-radius: 50px;
+            cursor: pointer;
+
+        }
+
+        #logout-button {
+    height: 20;
+    background-size: cover;
+    background-image: "logout.png";
+    /* background-color: #ff5722;  */
+    /* color: #fff; Text color */
+    border: none;
+    /* padding: 10px 10px; */
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#logout-button:hover {
+    background-color: rgb(72, 161, 177); /* Change background color on hover */
+    transform: scale(1.05); /* Add a subtle scale effect on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a box shadow on hover for depth */
+}
+
+        
+.report-list {
+            /* display: none; Hide report list by default */
+            margin: 20px;
+        }
+
+        .report-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .report-list li {
+            cursor: pointer;
+            margin: 10px 0;
+        }
+
+        .alert-form {
+            /* display: none; Hide alert form by default */
+            margin: 20px;
+        }
+
+        .previous-alerts {
+            display: block;
+            margin: 20px;
+        }
+
+        .report-list ul {
+            /* list-style: none; */
+            padding: 0;
+        }
+
+        .report-list li {
+            cursor: pointer;
+            margin: 10px 0;
+        }
+
+        .alert-form label, .alert-form input, .alert-form textarea, .alert-form button {
+            display: block;
+            margin: 10px 0;
+        }
+        .main {
+            background-image: "bgs.jpg";
+            background-color: black;
+            display: flex;
+            padding: 5px;
+            justify-content: center;
+            align-items: center;
+            height: 80.4vh;
+        }
+
+        .card {
+            border-radius: 50px;
+            font-family:'Times New Roman', Times, serif;
+            width: 540px;
+            height: 480px;
+            /* border-radius:50px; */
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            /* padding: 20px; */
+            /* margin: 10px; */
+            box-shadow: 0 4px 8px 0 #a47ec1;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        
+        #Read{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo"><img src="logoicon.jpeg" alt="" width="75"></div>
+        <button id="logout-button"><img src="logouticon.jpeg" width="30"></button>
+    </header>
+
+    <main class="main">
+            
+                <div id="Read" class="card">
+                    <h3 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 40px;">READ REPORTS</h3>
+                    <div class="report-list" style="border-right: 8px solid black;">
+                        <ul style="align-items: flex-start;">
+                            <li id="report1">
+                                <h3>Crime Report 1</h3>
+                                <p></p>
+                            </li>
+                            <li id="report2">Crime Report 2</li>
+                            <li id="report3">Crime Report 3</li>
+                            <!-- Add more sample reports as needed -->
+                        </ul>
+                    </div>
+                </div>
+            
+
+        
+            
+                <div id="drop" class="card">
+                    <h1 id="read report">DROP AN ALERT</h1>
+                    <div class="alert-form">
+                        <label for="alertSubject">Subject:</label>
+                        <input type="text" id="alertSubject" placeholder="Alert Subject">
+                        <label for="alertDuration">Days Alert Should Remain:</label>
+                        <input type="number" id="alertDuration" placeholder="Number of Days">
+
+                        <label for="alertDetails">Alert Details:</label>
+
+                        <input type="text" class="alertDetails" placeholder="Enter Alert Details">
+
+                        <button id="dropAlert">Drop</button>
+                    </div>
+
+                    <div class="previous-alerts">
+                        <h3>Previous Alerts</h3>
+                        <div>
+                            <ul>
+                                <li id="alert1">Alert 1</li>
+                                <li id="alert2">Alert 2</li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+
+                <script src="police.js"></script>
+        
+                
+            
+    </main>
+</body>
+</html>
