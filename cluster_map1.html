@@ -68,6 +68,28 @@
         addMarkerWithLabel({ lat: 10.0271, lng: 76.3082 }, "Marker 14");
         addMarkerWithLabel({ lat: 32.7097, lng: 74.8933 }, "Marker 15");
 
+        if (navigator.geolocation) {
+          // Get the device's current position.
+          navigator.geolocation.getCurrentPosition(
+            function (position) {
+              const deviceLocation = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude,
+              };
+
+              // Create a marker at the device's location.
+              addMarkerWithLabel(deviceLocation, "Device Location");
+
+              // Add the device's location to the clustering
+              markers.push(new google.maps.Marker(deviceLocation));
+            },
+            function (error) {
+              console.error("Error getting device location:", error);
+            }
+          );
+        } else {
+          console.error("Geolocation is not available in this browser.");
+        }
         // Initialize marker clustering
         const markerCluster = new MarkerClusterer(map, markers, {
           imagePath:
